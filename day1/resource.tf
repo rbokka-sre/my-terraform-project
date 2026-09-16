@@ -1,6 +1,6 @@
 resource "aws_instance" "web-app" {
   tags = {
-    Name        = "${"var.env"}-web-server"
+    Name        = "${var.env}-web-server"
     Environment = "var.env"
     Client      = "self"
   }
