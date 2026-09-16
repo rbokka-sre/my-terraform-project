@@ -81,6 +81,7 @@ jobs:
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
+      working-directory: ./day1
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
@@ -96,3 +97,4 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -auto-approve
+      working-directory: ./day1
