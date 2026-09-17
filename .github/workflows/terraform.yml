@@ -93,10 +93,15 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
-
+      
+    # Checks that all Terraform configuration files
+    - name: Terraform Validate
+      run: terraform validate
+      
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan -var-file="dev.auto.tfvars"
+      # run: terraform plan -var-file="dev.auto.tfvars"
+      run: terraform plan      
       working-directory: ./day3
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
