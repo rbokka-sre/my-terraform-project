@@ -16,7 +16,7 @@ variable availability_zone {
 }
 variable key_name {
   type = string
-  default = "jump-box-1"
+  default = "jump-kp-1"
 }
 variable volume_size {
   type = string
