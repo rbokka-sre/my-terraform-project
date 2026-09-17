@@ -18,7 +18,7 @@ variable key_name {
   type = string
   default = "jump-box-1"
 }
-variable voulume_size {
+variable volume_size {
   type = string
   default = "8"
 }
