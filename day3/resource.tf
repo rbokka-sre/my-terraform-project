@@ -1,6 +1,6 @@
 resource "aws_instance" "my-new-webapp" {
   tags = {
-    Name = "${var.env}"-web-server
+    Name = "${var.env}-web-server"
     Environment = var.env
     }
   ami = var.ami
